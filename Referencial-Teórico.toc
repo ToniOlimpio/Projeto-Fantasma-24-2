@@ -1,0 +1,113 @@
+~\hfill \textbf {Página}\par 
+\babel@toc {portuguese}{}\relax 
+\contentsline {section}{\numberline {1}Análise Descritiva Univariada}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Frequência Relativa}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Média}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Mediana}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Quartis}{4}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Variância}{4}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Variância Populacional}{4}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Variância Amostral}{5}{subsubsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.6}Desvio Padrão}{5}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}Desvio Padrão Populacional}{5}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {1.6.2}Desvio Padrão Amostral}{6}{subsubsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.7}Coeficiente de Variação}{6}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Coeficiente de Assimetria}{6}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Curtose}{7}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Boxplot}{7}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Histograma}{8}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Gráfico de Dispersão}{9}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Tipos de Variáveis}{10}{subsection.1.13}%
+\contentsline {subsubsection}{\numberline {1.13.1}Qualitativas}{10}{subsubsection.1.13.1}%
+\contentsline {subsubsection}{\numberline {1.13.2}Quantitativas}{10}{subsubsection.1.13.2}%
+\contentsline {subsection}{\numberline {1.14}Coeficiente de Correlação de Pearson}{11}{subsection.1.14}%
+\contentsline {subsection}{\numberline {1.15}Coeficiente de Correlação de Spearman}{11}{subsection.1.15}%
+\contentsline {subsection}{\numberline {1.16}Coeficiente de Correlação de Kendall}{12}{subsection.1.16}%
+\contentsline {subsection}{\numberline {1.17}Coeficiente de Goodman-Kruskal}{13}{subsection.1.17}%
+\contentsline {subsection}{\numberline {1.18}Coeficiente de Determinação (\(R^2\))}{13}{subsection.1.18}%
+\contentsline {subsection}{\numberline {1.19}Qui-Quadrado}{13}{subsection.1.19}%
+\contentsline {subsection}{\numberline {1.20}Coeficiente de Contingência}{14}{subsection.1.20}%
+\contentsline {subsection}{\numberline {1.21}Coeficiente de Contingência Corrigido}{14}{subsection.1.21}%
+\contentsline {subsection}{\numberline {1.22}Coeficiente de Contingência V de Cramer}{14}{subsection.1.22}%
+\contentsline {section}{\numberline {2}Definição para Testes}{16}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Teste de Hipóteses}{16}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Tipos de teste: bilateral e unilateral}{16}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Nível de significância (\(\mitalpha \))}{17}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Estatística do Teste}{17}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}P-valor}{17}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Intervalo de Confiança}{18}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Teste de Normalidade}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Teste de Normalidade de Shapiro-Wilk}{19}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Teste de Normalidade de Kolmogorov-Smirnov}{19}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Teste de Normalidade de Lilliefors}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Teste de Normalidade de Anderson-Darling}{21}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Teste de Homogeneidade de Variância}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Teste de Homogeneidade de Variância de Bartlett}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Teste de Homogeneidade de Variância de Breusch-Pagan}{23}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Teste de Homogeneidade de Variância de Levene}{23}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Teste F de Igualdade de Variância}{25}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Teste de Variância Constante de White}{25}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Teste de Homogeneidade de Variância de Brown-Forsythe}{26}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Teste de Comparação de Médias}{28}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Teste t Pareado}{28}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Teste de Wilcoxon Pareado}{29}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Teste t de Comparação de Médias para Variâncias Populacionais Conhecidas}{30}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Teste t de Comparação de Médias para Variâncias Populacionais Desconhecidas e Iguais}{30}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Teste t de Comparação de Médias para Variâncias Populacionais Desconhecidas e Diferentes}{32}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Teste de Wilcoxon-Mann-Whitney}{33}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Análise de Variância (ANOVA)}{34}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Teste de Fisher LSD}{36}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Teste de Tukey HSD}{36}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}Teste de Dunnett}{37}{subsection.5.10}%
+\contentsline {subsection}{\numberline {5.11}Teste de Duncan}{38}{subsection.5.11}%
+\contentsline {subsection}{\numberline {5.12}Teste de Kruskal-Wallis}{39}{subsection.5.12}%
+\contentsline {subsection}{\numberline {5.13}Teste de Comparação Múltipla de Conover}{40}{subsection.5.13}%
+\contentsline {subsection}{\numberline {5.14}Teste de Dunn}{40}{subsection.5.14}%
+\contentsline {subsection}{\numberline {5.15}Teste de Friedman}{41}{subsection.5.15}%
+\contentsline {section}{\numberline {6}Teste de Associação}{42}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Testes Qui-Quadrado}{42}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Teste de Aderência}{42}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Teste de Homogeneidade}{43}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Teste de Independência}{43}{subsubsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.4}Teste de Correlação de McNemar}{44}{subsubsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.2}Teste Exato de Fisher}{45}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Teste de Correlação de Pearson}{46}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Teste de Correlação de Postos de Spearman}{47}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Teste de Correlação de Postos de Kendall}{49}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Correlação Parcial de Kendall}{50}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Teste de Walsh}{51}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Teste de Cochran}{52}{subsection.6.8}%
+\contentsline {section}{\numberline {7}Teste de Diferença de Proporções}{53}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Comparação de Proporções em Duas Populações}{53}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Razão de Chances}{53}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Intervalo de Confiança para a Razão de Chances}{54}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Risco Relativo}{55}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Análise de Regressão}{56}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Análise de Regressão Linear}{56}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Estatística \emph {t}}{56}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}Soma de Quadrados}{57}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}Teste F}{57}{subsubsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.4}Coeficiente de Determinação na Regressão}{58}{subsubsection.8.1.4}%
+\contentsline {subsection}{\numberline {8.2}Análise de Regressão Logística Binária}{59}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Modelo \emph {Probit}}{60}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Análise de Regressão Logística Multinomial}{60}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Análise de Regressão Logística para Respostas Ordinais}{60}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Modelo de Poisson}{61}{subsection.8.6}%
+\contentsline {section}{\numberline {9}Análise Multivariada}{62}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Análise de Cluster}{62}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Dissimilaridade - variáveis quantitativas}{62}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}Similaridade - variáveis qualitativas}{63}{subsubsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.3}Métodos para construção de Clusters - Técnicas hierárquicas aglomerativas}{64}{subsubsection.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.1.4}Métodos para construção de Clusters - Técnicas não hierárquicas aglomerativas}{64}{subsubsection.9.1.4}%
+\contentsline {subsection}{\numberline {9.2}Análise de Componentes Principais}{64}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Análise fatorial}{65}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Amostragem}{68}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Amostragem Aleatória Simples}{68}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Amostragem Aleatória Estratificada}{69}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Amostragem Inversa}{70}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Amostragem Aleatória por Conglomerados}{70}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}1 estágio}{71}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Vários estágios}{71}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Amostragem sistemática}{71}{subsection.10.7}%
+\contentsline {subsection}{\numberline {10.8}Jackknife}{71}{subsection.10.8}%
+\contentsline {subsection}{\numberline {10.9}Bootstrap}{72}{subsection.10.9}%
