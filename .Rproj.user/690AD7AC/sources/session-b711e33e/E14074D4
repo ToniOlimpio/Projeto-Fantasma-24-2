@@ -1,0 +1,26 @@
+{
+    "id": "E14074D4",
+    "path": "~/GitHub/Projeto-Fantasma-estat-24-2/Pf.R",
+    "project_path": "Pf.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1729114449572.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "206,0",
+        "scrollLine": "0"
+    },
+    "folds": "16|30|35|0|\n40|16|113|0|\n116|16|165|0|\n168|16|177|0|\n",
+    "lastKnownWriteTime": 1730688858,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1730688858213,
+    "read_only": false,
+    "read_only_alternatives": []
+}
