@@ -1,0 +1,38 @@
+media <- mean(DN$engagement)
+mediana <- median(Fu$engagement)
+dp <- sd(AtletismoLimpo$IMC)
+variancia <- var(AtletismoLimpo$IMC)
+maximo <- max(DN$engagement)
+minimo <- min(DN$engagement)
+quantile(Esportes_analise$IMC, probs = c(0.25, 0.75, na.rm = TRUE))
+          print(media)
+print(desvio_padrao)
+print(variancia)
+print(minimo)
+print(mediana)
+print(quartis)
+print(maximo)
+
+sum(is.nan(Futebol))
+FutebolLimpo <- filter(Futebol, IMC != "NA")
+quantile(FutebolLimpo$IMC, probs = c(0.25, 0.75))
+
+DC$engagement <- unlist(DC$engagement)
+class(medidas_co$imdb)
+
+sum(Futebol$IMC)
+221.6/46
+
+cas <- filter(comidas, `Estado Civil` == 'Casado')
+sol <- filter(comidas, `Estado Civil` == 'Solteiro')
+nd <- filter(comidas, `Estado Civil` == 'Não declarou')
+
+sla <- female_medalhist %>%
+  count(Team, Medal) %>%
+  mutate(
+    freq = n,
+    relative_freq = round((freq / sum(freq)) * 100, 1),
+    freq = gsub("\\.", ",", relative_freq) %>% paste("%", sep = ""),
+    label = str_c(n, " (", freq, ")") %>% str_squish()
+  ) %>%
+  arrange(desc(n))

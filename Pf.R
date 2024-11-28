@@ -60,16 +60,38 @@ medalhist_country_solo <- female_medalhist %>%
 top5_medalhist_solo <- medalhist_country_solo[1:5,]
 top5_medalhist_solo$Team <- factor(top5_medalhist_solo$Team, levels = c('Estados Unidos', 'Russia', 'Alemanha', 'China', 'Australia'))
 
+#Ajeitando os dados para multivariado
+
+female_medalhistF <- female_medalhist %>%
+  count(Team, Medal) %>%
+  mutate(
+    freq = n,
+    relative_freq = round((freq / sum(freq)) * 100, 1),
+    freq = gsub("\\.", ",", relative_freq) %>% paste("%", sep = ""),
+    label = str_c(n, " (", freq, ")") %>% str_squish()
+  ) %>%
+  arrange(desc(n))
+female_medalhistEUA <- filter(female_medalhistF, Team == "United States")
+female_medalhistRUSSIA <- filter(female_medalhistF, Team == "Russia")
+female_medalhistGERMANY <- filter(female_medalhistF, Team == "Germany")
+female_medalhistCHINA <- filter(female_medalhistF, Team == "China")
+female_medalhistAUSTRALIA <- filter(female_medalhistF, Team == "Australia")
+female_medalhistMULTI <- rbind(female_medalhistAUSTRALIA, female_medalhistCHINA, female_medalhistEUA, female_medalhistGERMANY, female_medalhistRUSSIA)
+top5_medalhist_gen <- female_medalhistMULTI
+names(top5_medalhist_gen)[2] <- "Medalha"
 
 #Trocando o nome das variaveis para ficar em Português
 
 top5_medalhist_solo[1:5,1] = c("Estados Unidos", "Russia", "Alemanha", "China", "Australia")
-top5_medalhist_gen[1:15,1] = c("Estados Unidos", "Estados Unidos", "Estados Unidos", "China", "Russia", "Australia", "Alemanha", "Alemanha", "Russia", "Russia", "Australia", "China", "Alemanha", "Australia", "China")
-top5_medalhist_gen[1:15,2] = c("Ouro", "Prata", "Bronze", "Ouro", "Prata", "Prata", "Bronze", "Ouro", "Ouro", "Bronze", "Ouro", "Prata", "Prata", "Bronze", "Bronze")
+top5_medalhist_gen[7:9,1] = c("Estados Unidos")
+top5_medalhist_gen[10:12,1] = c("Alemanha")
+top5_medalhist_gen[1:15,2] = c("Prata", "Ouro", "Bronze", "Ouro", "Prata", "Bronze", "Ouro", "Prata", "Bronze", "Bronze", "Ouro", "Prata", "Prata", "Ouro", "Bronze")
+top5_medalhist_gen$Team <- factor(top5_medalhist_gen$Team, levels = c("Estados Unidos", 'Russia', "Alemanha", 'China', 'Australia'))
+top5_medalhist_gen$Medal <- factor(top5_medalhist_gen$Medalha, levels = c('Ouro', 'Prata', 'Bronze'))
 
 #Criando o gráfico univariado
 
- ggplot(top5_medalhist_solo) +
+ggplot(top5_medalhist_solo) +
   aes(x = fct_reorder(Team, n, .desc=T), y = n, label = label) +
   geom_bar(stat = "identity", fill = "#A11D21", width = 0.7) +
   geom_text(
@@ -77,29 +99,16 @@ top5_medalhist_gen[1:15,2] = c("Ouro", "Prata", "Bronze", "Ouro", "Prata", "Prat
     vjust = -0.5, #hjust = .5,
     size = 3
   ) +
-  labs(x = "Equipe", y = "Quantidade de medalhistas") +
+  labs(x = "Equipe olímpica", y = "Quantidade de medalhistas") +
   theme_estat() 
 ggsave("colunas-uni-freq-solo.pdf", width = 158, height = 93, units = "mm")
-
-#Ajeitando os dados para multivariado
-
-female_medalhistEUA <- filter(female_medalhist, Team == "United States")
-female_medalhistRUSSIA <- filter(female_medalhist, Team == "Russia")
-female_medalhistGERMANY <- filter(female_medalhist, Team == "Germany")
-female_medalhistCHINA <- filter(female_medalhist, Team == "China")
-female_medalhistAUSTRALIA <- filter(female_medalhist, Team == "Australia")
-female_medalhistMULTI <- rbind(female_medalhistAUSTRALIA, female_medalhistCHINA, female_medalhistEUA, female_medalhistGERMANY, female_medalhistRUSSIA)
-top5_medalhist_gen <- female_medalhistMULTI %>% count(Team, Medal, sort = TRUE)
-top5_medalhist_gen$Team <- factor(top5_medalhist_gen$Team, levels = c('Estados Unidos', 'Russia', 'Alemanha', 'China', 'Australia'))
-top5_medalhist_gen$Medal <- factor(top5_medalhist_gen$Medal, levels = c('Ouro', 'Prata', 'Bronze'))
-names(top5_medalhist_gen)[2] <- "Medalha"
 
 #Criando o gráfico multivariado
 
 ggplot(top5_medalhist_gen) +
   aes(
     x = fct_reorder(Team, n, .desc = T), y = n,
-    fill = Medalha, label = n
+    fill = Medalha, label = label
   ) +
   geom_col(position = position_dodge2(preserve = "single", padding =
                                         0)) +
@@ -108,7 +117,7 @@ ggplot(top5_medalhist_gen) +
     vjust = -0.5, hjust = 0.5,
     size = 3
   ) +
-  labs(x = "Equipes", y = "Quantidade de medalhas") +
+  labs(x = "Equipe olímpica", y = "Quantidade de medalhas") +
   theme_estat()
 ggsave("colunas-bi-freq.pdf", width = 158, height = 93, units = "mm")
 
@@ -158,23 +167,77 @@ ggsave("box_est.pdf", width = 158, height = 93, units = "mm")
 
 #Medidas IMC
 
-describe(Futebol$IMC)
-describe(Judô$IMC)
-describe(Ginástica$IMC)
+GinasticaLimpo <- filter(Ginástica, IMC != "NA")
+describe(GinasticaLimpo$IMC)
+quantile(GinasticaLimpo$IMC, probs = c(0.25, 0.75))
+var(GinasticaLimpo$IMC)
+
+AtletismoLimpo <- filter(Atletismo, IMC != "NA")
 describe(Atletismo$IMC)
+quantile(AtletismoLimpo$IMC, probs = c(0.25, 0.75))
+var(AtletismoLimpo$IMC)
+
+BadLimpo <- filter(Badminton, IMC != "NA")
 describe(Badminton$IMC)
+quantile(BadLimpo$IMC, probs = c(0.25, 0.75))
+var(BadLimpo$IMC)
+
+FutebolLimpo <- filter(Futebol, IMC != "NA")
+describe(FutebolLimpo$IMC)
+quantile(FutebolLimpo$IMC, probs = c(0.25, 0.75))
+var(FutebolLimpo$IMC)
+
+JudoLimpo <- filter(Judô, IMC != "NA")
+describe(Judô$IMC)
+quantile(JudoLimpo$IMC, probs = c(0.25, 0.75))
+var(JudoLimpo$IMC)
 
 ################
 #  Análise 3   #
 ################
 
 #Organizando o banco de dados
-AtletasUnidade <- count(Olimpiadas_2000_2016, Names, Medal, sort = T)
-AtletasUnidade <- filter(AtletasUnidade, Medal != 'NA')
-AtletasUni <- count(Olimpiadas_2000_2016, Names)
-AtlestasUni <- AtlestasUni[order(AtlestasUni$n),]
-AtletasTop3 <- AtletasUni[10473:10537,]
-Top3Atletas <- filter(AtletasUnidade, Names == Atle)
+AtletasUnidade <- filter(Olimpiadas_2000_2016, Medal != 'NA')
+AtletasUni <- count(AtletasUnidade, Names)
+AtletasUni <- AtletasUni[order(AtletasUni$n, decreasing = TRUE),]
+AtletasTop3 <- AtletasUni[1:5, ]
+Medalhas_Geral <- count(AtletasUnidade, Names, Medal)
+Medalhas_Geral_Top3 <- Medalhas_Geral %>% filter(Names %in% AtletasTop3$Names)
+Nomes <- count(Olimpiadas_2000_2016, Names)
+top <- table(count(Olimpiadas_2000_2016$Names))
+topmedalistas <- Olimpiadas_2000_2016 %>%
+  group_by(Names) %>%
+  summarize(freq = n()) %>%
+  arrange(desc(freq)) %>%
+  head(3)
+
+
+#Preparando para o gráfico
+Graph <- Olimpiadas_2000_2016 %>%
+  filter(!is.na(Medal)) %>%
+  count(Names, Medal) %>%
+  mutate(
+    freq = n,
+    relative_freq = round((freq / sum(freq)) * 100, 1),
+    freq = gsub("\\.", ",", relative_freq) %>% paste("%", sep = ""),
+    label = str_c(n, " (", freq, ")") %>% str_squish()
+
+#Grafico
+ggplot(Medalhas_Geral_Top3) +
+  aes(
+    x = fct_reorder(Names, n, .desc = T), y = n,
+    fill = Medal, label = n
+  ) +
+  geom_col(position = position_dodge2(preserve = "single", padding =
+                                        0)) +
+  geom_text(
+    position = position_dodge(width = .9),
+    vjust = -0.5, hjust = 0.5,
+    size = 3
+  ) +
+  labs(x = "Nome do atleta", y = "Quantia de cada medalha") +
+  theme_estat()
+ggsave("colunas-bi-freq.pdf", width = 158, height = 93, units = "mm"
 
 ################
 #  Análise 4   #
@@ -182,25 +245,26 @@ Top3Atletas <- filter(AtletasUnidade, Names == Atle)
 
 #Preparando o banco de dados
 Medalhistas <- filter(Olimpiadas_2000_2016, Medal != "NA")
-Medalhistas_Pes <- count(Medalhistas, Names, Medalhistas$'Height (cm)', Medalhistas$'Weight (lbs)')
+Medalhistas_Pes <- count(Medalhistas, Names, Medalhistas$`Height (cm)`, Medalhistas$`Weight (lbs)`)
 names(Medalhistas_Pes)[2] <- "Altura"
 names(Medalhistas_Pes)[3] <- "Peso"
 Medalhistas_Pes$Peso <- Medalhistas_Pes$Peso * 0.45359237
-Medalhistas_Pes <- Medalhistas_Pes[-945,]
-Medalhistas_Pes$Peso <- format(Medalhistas_Pes$Peso, nsmall = 0)
+Medalhistas_Pes <- Medalhistas_Pes[-945,] #Removendo um dado que está NA
 
 #O Gráfico de dispersão
 ggplot(Medalhistas_Pes) +
   aes(x = Altura, y = Peso) +
-  geom_point(colour = "#A11D21", size = 3) +
+  geom_shutter(colour = "#A11D21", size = 3) +
   labs(
-    x = "Peso",
-    y = "Altura"
+    x = "Peso (em Kg)",
+    y = "Altura (em Cm)"
   ) +
   theme_estat()
 ggsave("disp_uni.pdf", width = 158, height = 93, units = "mm")
 
 #Medidas
 describe(Medalhistas_Pes$Altura)
+var(Medalhistas_Pes$Altura)
 describe(Medalhistas_Pes$Peso)
+var(Medalhistas_Pes$Peso)
 cor(Medalhistas_Pes$Altura, Medalhistas_Pes$Peso, method = "pearson")
